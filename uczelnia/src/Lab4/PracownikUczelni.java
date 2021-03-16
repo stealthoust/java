@@ -1,6 +1,6 @@
 package Lab4;
 
-public class PracownikUczelni extends Czlowiek{
+public class PracownikUczelni extends Czlowiek implements IKonsola{
     private String tytul;
     private String stanowisko;
     private float pensja;

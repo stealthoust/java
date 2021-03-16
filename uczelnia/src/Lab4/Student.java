@@ -1,9 +1,16 @@
 package Lab4;
 
-public class Student extends Czlowiek {
+public class Student extends Czlowiek implements IKonsola,Comparable {
+    @Override
+    public int compareTo(Object o1) {
+        return this.semestr-((Student)o1).semestr;
+
+    }
+
     private int semestr;
     private String album;
-    public Student(String imie, String nazwisko, Plec plec, String adres, int wiek, String pesel, int semestr, String album)
+    public Student(String imie, String nazwisko, Plec plec, String adres,
+                   int wiek, String pesel, int semestr, String album)
     {
         super(imie,nazwisko,plec,adres,wiek,pesel);
         this.semestr=semestr;

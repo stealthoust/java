@@ -1,7 +1,7 @@
 package Lab4;
 
 import java.io.*;
-public class Czlowiek {
+public class Czlowiek implements IKonsola{
     private String imie;
     private String nazwisko;
     private String adres;
