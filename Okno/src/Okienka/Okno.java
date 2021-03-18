@@ -1,7 +1,6 @@
-package com.company;
+package Okienka;
 
 import java.awt.Frame;
-import java.awt.GraphicsConfiguration;
 import java.awt.HeadlessException;
 import java.awt.event.WindowEvent;
 import java.awt.event.WindowListener;
@@ -38,7 +37,8 @@ public class Okno extends Frame implements WindowListener{
 
    @Override
    public void windowClosing(WindowEvent e) {
-System.exit(0);
+
+        System.exit(0);
    }
 
    @Override
