@@ -9,7 +9,11 @@ import java.awt.event.WindowListener;
 
 public class Okno2 extends Frame implements WindowListener,ActionListener {
 
-    Button przycisk = new Button("Przycisk");
+
+    Button przycisk1 = new Button("Pierwszy przycisk");
+    Button przycisk2 = new Button("Drugi przycisk") ;
+    Button przycisk3 = new Button("Trzeci przycisk") ;
+
 
     public Okno2(GraphicsConfiguration gc) {
         super(gc);
@@ -29,15 +33,25 @@ public class Okno2 extends Frame implements WindowListener,ActionListener {
         setVisible(true);
         this.addWindowListener(this);
 
-        przycisk.addActionListener(this);
-        przycisk.setBounds(100,50,200,25);
-        przycisk.setVisible(true);
-        add(przycisk);
+        przycisk1.addActionListener(this) ;
+        przycisk1.setBounds(200,50,100,25);
+        przycisk1.setVisible(true);
+        add(przycisk1);
         this.setLayout(null);
 
+        przycisk2.addActionListener(this);
+        przycisk2.setBounds(50,50,100,25);
+        przycisk2.setVisible(true);
+        add(przycisk2);
 
+        przycisk3.addActionListener(this);
+        przycisk3.setBounds(100,100,100,25);
+        przycisk3.setVisible(true);
+       add(przycisk3);
 
-
+przycisk1.setActionCommand("pierwszy");
+przycisk2.setActionCommand("drugi");
+przycisk3.setActionCommand("trzeci");
 
 
     }
@@ -58,9 +72,20 @@ Okno2 o2 = new Okno2() ;
 
     @Override
     public void actionPerformed(ActionEvent e) {
-
-przycisk.setLocation(przycisk.getX()+5,przycisk.getY()+5);
-setTitle("Przycisk wcisniety");
+if(e.getActionCommand()==("pierwszy"))
+{
+    setTitle("pierwszy");
+}
+else if(e.getActionCommand()==("drugi"))
+{
+    setTitle("drugi");
+}
+else
+{
+    setTitle("trzeci");
+}
+//przycisk1.setLocation(przycisk1.getX()+5,przycisk1.getY()+5);
+//setTitle("Przycisk wcisniety");
     }
 
     @Override
