@@ -3,11 +3,13 @@ package Okienka;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+
 import java.awt.event.WindowEvent;
 import java.awt.event.WindowListener;
 
-public class Okno2 extends Frame implements WindowListener, ActionListener {
+public class Okno2 extends Frame implements WindowListener,ActionListener {
 
+    Button przycisk = new Button("Przycisk");
 
     public Okno2(GraphicsConfiguration gc) {
         super(gc);
@@ -23,13 +25,20 @@ public class Okno2 extends Frame implements WindowListener, ActionListener {
 
     public Okno2() throws HeadlessException {
         super();
-        setBounds(10,10,400,400);
+        setBounds(1250,250,500,250);
         setVisible(true);
         this.addWindowListener(this);
-        Button przycisk = new Button("Przycisk");
-        przycisk.setBounds(40,40,20,30);
+
+        przycisk.addActionListener(this);
+        przycisk.setBounds(100,50,200,25);
         przycisk.setVisible(true);
         add(przycisk);
+        this.setLayout(null);
+
+
+
+
+
 
     }
 
@@ -37,6 +46,7 @@ public class Okno2 extends Frame implements WindowListener, ActionListener {
     public static void main(String[] args) {
 
 Okno2 o2 = new Okno2() ;
+
     }
 
 
@@ -49,6 +59,8 @@ Okno2 o2 = new Okno2() ;
     @Override
     public void actionPerformed(ActionEvent e) {
 
+przycisk.setLocation(przycisk.getX()+5,przycisk.getY()+5);
+setTitle("Przycisk wcisniety");
     }
 
     @Override
