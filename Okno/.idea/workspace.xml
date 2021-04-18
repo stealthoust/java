@@ -11,6 +11,8 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Interface" />
+        <option value="Kotlin Class" />
+        <option value="module-info" />
         <option value="Class" />
       </list>
     </option>
@@ -87,30 +89,7 @@
       <recent name="com.company" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.Okno2 (1)">
-    <configuration name="Main" type="Application" factoryName="Application" temporary="true">
-      <option name="MAIN_CLASS_NAME" value="com.company.Okno" />
-      <module name="Okno" />
-      <option name="WORKING_DIRECTORY" value="file://$PROJECT_DIR$" />
-      <RunnerSettings RunnerId="Run" />
-      <ConfigurationWrapper RunnerId="Run" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="Okno2 (1)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="Okienka.Okno2" />
-      <module name="Okno" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="Okienka.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
+  <component name="RunManager" selected="Application.RozkladBorder">
     <configuration name="Okno2" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.company.Okno2" />
       <module name="Okno" />
@@ -124,11 +103,72 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="Okno2" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Lab5.Okno2" />
+      <module name="Okno" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="Lab5.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="RozkladBorder" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Lab6.RozkladBorder" />
+      <module name="Okno" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="Lab6.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="RozkladGrid" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Lab6.RozkladGrid" />
+      <module name="Okno" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="Lab6.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Zadanie1" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Lab6.Zadanie1" />
+      <module name="Okno" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="Lab6.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Zadanie4" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Zadanie4" />
+      <module name="Okno" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.Okno2 (1)" />
+        <item itemvalue="Application.RozkladBorder" />
+        <item itemvalue="Application.RozkladGrid" />
+        <item itemvalue="Application.Zadanie4" />
+        <item itemvalue="Application.Zadanie1" />
         <item itemvalue="Application.Okno2" />
-        <item itemvalue="Application.Main" />
       </list>
     </recent_temporary>
   </component>

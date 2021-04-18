@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="520.0" style="-fx-background-color: #c8c7bb;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.LoginController">
+   <left>
+      <AnchorPane prefHeight="407.0" prefWidth="228.0" BorderPane.alignment="CENTER">
+         <children>
+            <ImageView fx:id="zdjecieWidok" fitHeight="390.0" fitWidth="232.0" layoutY="6.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../zdj/pobrane.jpg" />
+               </image>
+            </ImageView>
+         </children>
+      </AnchorPane>
+   </left>
+   <right>
+      <AnchorPane prefHeight="400.0" prefWidth="333.0" BorderPane.alignment="CENTER">
+         <children>
+            <Label layoutX="38.0" layoutY="94.0" prefHeight="30.0" prefWidth="60.0" text="LOGIN" textAlignment="CENTER">
+               <font>
+                  <Font size="13.0" />
+               </font>
+            </Label>
+            <Label layoutX="38.0" layoutY="140.0" prefHeight="30.0" prefWidth="60.0" text="HASŁO" textAlignment="CENTER">
+               <font>
+                  <Font size="13.0" />
+               </font>
+            </Label>
+            <TextField fx:id="polelogin" layoutX="98.0" layoutY="96.0" prefHeight="26.0" prefWidth="173.0" promptText="Login" />
+            <PasswordField fx:id="polehaslo" layoutX="98.0" layoutY="143.0" prefHeight="26.0" prefWidth="173.0" promptText="Hasło" />
+            <Button fx:id="przycisklogin" layoutX="20.0" layoutY="241.0" mnemonicParsing="false" onAction="#przyciskloginAction" prefHeight="36.0" prefWidth="249.0" style="-fx-background-color: #fdc050;" text="ZALOGUJ" textAlignment="CENTER">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Button>
+            <Button fx:id="przyciskanuluj" layoutX="20.0" layoutY="298.0" mnemonicParsing="false" onAction="#PrzyciskanulujAction" prefHeight="36.0" prefWidth="249.0" style="-fx-background-color: #fdc050;" text="ANULUJ" textAlignment="CENTER">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Button>
+            <Label fx:id="alertlogin" layoutX="18.0" layoutY="186.0" prefHeight="29.0" prefWidth="257.0" textAlignment="CENTER" textFill="RED">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+   </right>
+</BorderPane>

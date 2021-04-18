@@ -26,7 +26,7 @@ public class Wektor3D {
         this.nazwa = nazwa;
     }
 
-    private void Suma(Wektor3D a, Wektor3D b) {
+    private void Suma(Wektor3D a,    Wektor3D b) {
         this.X = a.X + b.X;
         this.Y = a.Y + b.Y;
         this.Z = a.Z + b.Z;

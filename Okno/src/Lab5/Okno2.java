@@ -1,4 +1,4 @@
-package Okienka;
+package Lab5;
 
 import java.awt.*;
 import java.awt.event.ActionEvent;
@@ -13,6 +13,8 @@ public class Okno2 extends Frame implements WindowListener,ActionListener {
     Button przycisk1 = new Button("Pierwszy przycisk");
     Button przycisk2 = new Button("Drugi przycisk") ;
     Button przycisk3 = new Button("Trzeci przycisk") ;
+    Button przycisk4 = new Button("Czwarty przycisk") ;
+    Button przycisk5 = new Button("Piaty przycisk") ;
 
 
     public Okno2(GraphicsConfiguration gc) {
@@ -49,10 +51,21 @@ public class Okno2 extends Frame implements WindowListener,ActionListener {
         przycisk3.setVisible(true);
        add(przycisk3);
 
+        przycisk4.addActionListener(this);
+        przycisk4.setBounds(150,150,100,25);
+        przycisk4.setVisible(true);
+        add(przycisk4);
+
+        przycisk5.addActionListener(this);
+        przycisk5.setBounds(200,200,100,25);
+        przycisk5.setVisible(true);
+        add(przycisk5);
+
 przycisk1.setActionCommand("pierwszy");
 przycisk2.setActionCommand("drugi");
 przycisk3.setActionCommand("trzeci");
-
+        przycisk4.setActionCommand("czwarty");
+        przycisk5.setActionCommand("piaty");
 
     }
 
@@ -80,9 +93,19 @@ else if(e.getActionCommand()==("drugi"))
 {
     setTitle("drugi");
 }
-else
+else if(e.getActionCommand()==("trzeci"))
 {
     setTitle("trzeci");
+}
+
+else if(e.getActionCommand()==("czwarty"))
+{
+    setTitle("czwarty");
+}
+
+else if(e.getActionCommand()==("piaty"))
+{
+    setTitle("piaty");
 }
 //przycisk1.setLocation(przycisk1.getX()+5,przycisk1.getY()+5);
 //setTitle("Przycisk wcisniety");

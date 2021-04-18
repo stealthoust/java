@@ -1,4 +1,4 @@
-package Okienka;
+package Lab5;
 
 import java.awt.Frame;
 import java.awt.HeadlessException;
