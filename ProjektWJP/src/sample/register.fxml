@@ -63,7 +63,7 @@
             <Font size="14.0" />
          </font>
       </PasswordField>
-      <Button fx:id="rejestracjaButton" layoutX="92.0" layoutY="507.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="300.0" style="-fx-background-color: #2fffcd;" text="Zarejestruj">
+      <Button fx:id="rejestracjaButton" layoutX="92.0" layoutY="507.0" mnemonicParsing="false" onAction="#registerButtonAction" prefHeight="25.0" prefWidth="300.0" style="-fx-background-color: #2fffcd;" text="Zarejestruj">
          <font>
             <Font size="14.0" />
          </font>
@@ -73,12 +73,12 @@
             <Font size="14.0" />
          </font>
       </Button>
-      <Label fx:id="alertregister" alignment="CENTER" layoutX="28.0" layoutY="427.0" prefHeight="50.0" prefWidth="465.0" text="Rejestracja przebiegła pomyślnie. Możesz zalogować się na swoje konto!" textFill="#940000">
+      <Label fx:id="alertregister" alignment="CENTER" layoutX="28.0" layoutY="427.0" prefHeight="50.0" prefWidth="465.0" textFill="#940000">
          <font>
             <Font size="14.0" />
          </font>
       </Label>
-      <Label fx:id="alertpotwierdzhaslo" alignment="CENTER_RIGHT" layoutX="94.0" layoutY="341.0" prefHeight="25.0" prefWidth="300.0" text="Hasła nie są takie same!" textFill="#940000">
+      <Label fx:id="alertpotwierdzhaslo" alignment="CENTER_RIGHT" layoutX="94.0" layoutY="341.0" prefHeight="25.0" prefWidth="300.0" textFill="#940000">
          <font>
             <Font size="14.0" />
          </font>
