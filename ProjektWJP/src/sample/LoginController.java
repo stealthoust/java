@@ -105,7 +105,7 @@ try
     Parent root = FXMLLoader.load(getClass().getResource("register.fxml"));
     Stage rejestracjaStage=new Stage();
     rejestracjaStage.initStyle(StageStyle.UNDECORATED);
-    rejestracjaStage.setScene(new Scene(root, 520, 626));
+    rejestracjaStage.setScene(new Scene(root, 613, 621));
     rejestracjaStage.show();
 
 }

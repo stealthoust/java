@@ -9,79 +9,89 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="626.0" prefWidth="520.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.RegisterController">
+<AnchorPane prefHeight="621.0" prefWidth="613.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.RegisterController">
    <children>
-      <AnchorPane prefHeight="50.0" prefWidth="520.0" style="-fx-background-color: #2fffcd;">
+      <AnchorPane prefHeight="57.0" prefWidth="613.0" style="-fx-background-color: #2fffcd;">
          <children>
-            <ImageView fx:id="zdjecieWidok2" fitHeight="50.0" fitWidth="48.0" layoutX="116.0" layoutY="4.0" pickOnBounds="true" preserveRatio="true">
+            <ImageView fx:id="zdjecieWidok2" fitHeight="50.0" fitWidth="48.0" layoutX="170.0" layoutY="5.0" pickOnBounds="true" preserveRatio="true">
                <image>
                   <Image url="@../../zdj/HowToRegisterIcon.png" />
                </image>
             </ImageView>
-            <Label layoutX="194.0" layoutY="5.0" prefHeight="50.0" prefWidth="200.0" text="Rejestracja" textAlignment="CENTER">
+            <Label layoutX="251.0" layoutY="4.0" prefHeight="50.0" prefWidth="200.0" text="Rejestracja" textAlignment="CENTER">
                <font>
                   <Font name="Arial" size="32.0" />
                </font>
             </Label>
          </children>
       </AnchorPane>
-      <Label layoutX="91.0" layoutY="93.0" prefHeight="19.0" prefWidth="100.0" text="Imię">
+      <Label layoutX="155.0" layoutY="93.0" prefHeight="19.0" prefWidth="100.0" text="Imię">
          <font>
             <Font size="14.0" />
          </font>
       </Label>
-      <TextField fx:id="poleimie" layoutX="92.0" layoutY="113.0" prefHeight="25.0" prefWidth="300.0" promptText="Imię" />
-      <Label layoutX="91.0" layoutY="156.0" prefHeight="19.0" prefWidth="100.0" text="Nazwisko">
+      <TextField fx:id="poleimie" layoutX="156.0" layoutY="113.0" prefHeight="25.0" prefWidth="300.0" promptText="Imię" />
+      <Label layoutX="155.0" layoutY="156.0" prefHeight="19.0" prefWidth="100.0" text="Nazwisko">
          <font>
             <Font size="14.0" />
          </font>
       </Label>
-      <TextField fx:id="polenazwisko" layoutX="91.0" layoutY="176.0" prefHeight="25.0" prefWidth="300.0" promptText="Nazwisko" />
-      <Label layoutX="91.0" layoutY="218.0" prefHeight="19.0" prefWidth="100.0" text="Login">
+      <TextField fx:id="polenazwisko" layoutX="155.0" layoutY="176.0" prefHeight="25.0" prefWidth="300.0" promptText="Nazwisko" />
+      <Label layoutX="155.0" layoutY="218.0" prefHeight="19.0" prefWidth="100.0" text="Login">
          <font>
             <Font size="14.0" />
          </font>
       </Label>
-      <TextField fx:id="ustawlogin" layoutX="91.0" layoutY="238.0" prefHeight="25.0" prefWidth="300.0" promptText="Login" />
-      <Label layoutX="91.0" layoutY="284.0" prefHeight="19.0" prefWidth="100.0" text="Hasło">
+      <TextField fx:id="ustawlogin" layoutX="155.0" layoutY="238.0" prefHeight="25.0" prefWidth="300.0" promptText="Login" />
+      <Label layoutX="155.0" layoutY="284.0" prefHeight="19.0" prefWidth="100.0" text="Hasło">
          <font>
             <Font size="14.0" />
          </font>
       </Label>
-      <Label layoutX="91.0" layoutY="347.0" prefHeight="19.0" prefWidth="100.0" text="Powtórz hasło">
+      <Label layoutX="155.0" layoutY="344.0" prefHeight="19.0" prefWidth="100.0" text="Powtórz hasło">
          <font>
             <Font size="14.0" />
          </font>
       </Label>
-      <PasswordField fx:id="ustawhaslo" layoutX="91.0" layoutY="304.0" prefHeight="25.0" prefWidth="300.0" promptText="Hasło">
+      <PasswordField fx:id="ustawhaslo" layoutX="155.0" layoutY="304.0" prefHeight="25.0" prefWidth="300.0" promptText="Hasło">
          <font>
             <Font size="14.0" />
          </font>
       </PasswordField>
-      <PasswordField fx:id="ustawhaslo2" layoutX="91.0" layoutY="367.0" prefHeight="25.0" prefWidth="300.0" promptText="Powtórz hasło">
+      <PasswordField fx:id="ustawhaslo2" layoutX="155.0" layoutY="367.0" prefHeight="25.0" prefWidth="300.0" promptText="Powtórz hasło">
          <font>
             <Font size="14.0" />
          </font>
       </PasswordField>
-      <Button fx:id="rejestracjaButton" layoutX="92.0" layoutY="507.0" mnemonicParsing="false" onAction="#registerButtonAction" prefHeight="25.0" prefWidth="300.0" style="-fx-background-color: #2fffcd;" text="Zarejestruj">
+      <Button fx:id="rejestracjaButton" layoutX="14.0" layoutY="512.0" mnemonicParsing="false" onAction="#registerButtonAction" prefHeight="30.0" prefWidth="269.0" style="-fx-background-color: #2fffcd;" text="Zarejestruj">
          <font>
             <Font size="14.0" />
          </font>
       </Button>
-      <Button fx:id="zamknijButton" layoutX="91.0" layoutY="558.0" mnemonicParsing="false" onAction="#zamknijButtonAction" prefHeight="25.0" prefWidth="300.0" style="-fx-background-color: #2fffcd;" text="Zamknij">
+      <Button fx:id="zamknijButton" layoutX="314.0" layoutY="563.0" mnemonicParsing="false" onAction="#zamknijButtonAction" prefHeight="30.0" prefWidth="269.0" style="-fx-background-color: #2fffcd;" text="Zamknij">
          <font>
             <Font size="14.0" />
          </font>
       </Button>
-      <Label fx:id="alertregister" alignment="CENTER" layoutX="28.0" layoutY="427.0" prefHeight="50.0" prefWidth="465.0" textFill="#940000">
+      <Label fx:id="alertregister" alignment="CENTER" layoutX="28.0" layoutY="427.0" prefHeight="48.0" prefWidth="566.0" textFill="#940000">
          <font>
             <Font size="14.0" />
          </font>
       </Label>
-      <Label fx:id="alertpotwierdzhaslo" alignment="CENTER_RIGHT" layoutX="94.0" layoutY="341.0" prefHeight="25.0" prefWidth="300.0" textFill="#940000">
+      <Label fx:id="alertpotwierdzhaslo" alignment="CENTER_RIGHT" layoutX="158.0" layoutY="341.0" prefHeight="25.0" prefWidth="300.0" textFill="#940000">
          <font>
             <Font size="14.0" />
          </font>
       </Label>
+      <Button fx:id="mjkButton" layoutX="315.0" layoutY="512.0" mnemonicParsing="false" onAction="#mjkButtonAction" prefHeight="30.0" prefWidth="269.0" style="-fx-background-color: #2fffcd;" text="Masz już konto?">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Button>
+      <Button fx:id="wyczyscButton" layoutX="14.0" layoutY="563.0" mnemonicParsing="false" onAction="#wyczyscButtonAction" prefHeight="30.0" prefWidth="269.0" style="-fx-background-color: #2fffcd;" text="Wyczyść dane">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Button>
    </children>
 </AnchorPane>

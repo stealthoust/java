@@ -38,6 +38,10 @@ TextField poleimie;
 TextField polenazwisko;
 @FXML
 TextField ustawlogin;
+@FXML
+private Button wyczyscButton;
+@FXML
+Button mjkButton;
 
     public RegisterController() {
     }
@@ -76,6 +80,22 @@ TextField ustawlogin;
 
     }
 
+    public void wyczyscButtonAction (ActionEvent event)
+    {
+        poleimie.setText("");
+        polenazwisko.setText("");
+        ustawlogin.setText("");
+        ustawhaslo.setText("");
+        ustawhaslo2.setText("");
+    }
+
+    public void mjkButtonAction (ActionEvent event)
+    {
+        Stage stage =(Stage) mjkButton.getScene().getWindow();
+        stage.close();
+    }
+
+
     public void rejestracjaUser()
     {
         sample.BazaDanychConnect polaczenie= new sample.BazaDanychConnect();
@@ -85,24 +105,43 @@ TextField ustawlogin;
         String nazwisko=polenazwisko.getText();
         String login=ustawlogin.getText();
         String haslo=ustawhaslo.getText();
+        String kodsql = "INSERT INTO users (imie,nazwisko,login,haslo) VALUES('";
+        String wpisane = imie + "','" + nazwisko + "','" + login + "','" + haslo + "')";
+        String wpisanerejestracja = kodsql + wpisane;
 
-        String kodsql="INSERT INTO users (imie,nazwisko,login,haslo) VALUES('";
-        String wpisane=imie+"','"+nazwisko+"','"+login+"','"+haslo+"')";
-        String wpisanerejestracja= kodsql+wpisane;
 
-        try
-        {
-            Statement statement = polaczDB.createStatement();
-            statement.executeUpdate(wpisanerejestracja);
-            alertregister.setText("Rejestracja przebiegła pomyślnie. Możesz zalogować się na swoje konto!");
-        }
+
+
+           try {
+
+               if(poleimie.getLength()<3 || poleimie.getLength()>20 ||
+               polenazwisko.getLength()<3 || polenazwisko.getLength()>20 ||
+               ustawlogin.getLength()<3 || ustawlogin.getLength()>20 ||
+               ustawhaslo.getLength()<3 || ustawhaslo.getLength()>20
+               )
+               {
+                alertregister.setText("Wszystkie powyższe pola muszą mieć 3-20 znakow!");
+               }
+         else{
+                   Statement statement = polaczDB.createStatement();
+                   statement.executeUpdate(wpisanerejestracja);
+                   alertregister.setText("Rejestracja przebiegła pomyślnie. Możesz zalogować się na swoje konto!");
+               }
+            }
+
+
         catch(Exception e)
         {
-            e.printStackTrace();
-            e.getCause();
+            //e.printStackTrace();
+            //e.getCause();
+            alertregister.setText("Podany login istnieje juz w bazie!");
         }
 
 
 
     }
+
+
+
+
 }
