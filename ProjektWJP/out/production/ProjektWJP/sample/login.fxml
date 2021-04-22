@@ -52,12 +52,12 @@
                   <Font size="14.0" />
                </font>
             </Label>
-            <Button fx:id="zamowButton" layoutX="169.0" layoutY="228.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="193.0" style="-fx-background-color: #fdc050;" text="ZAMÓW BEZ LOGOWANIA" textAlignment="CENTER">
+            <Button fx:id="zamowButton" layoutX="169.0" layoutY="228.0" mnemonicParsing="false" onAction="#zamowButtonAction" prefHeight="30.0" prefWidth="193.0" style="-fx-background-color: #fdc050;" text="ZAMÓW BEZ LOGOWANIA" textAlignment="CENTER">
                <font>
                   <Font size="14.0" />
                </font>
             </Button>
-            <Button fx:id="przyciskanuluj1" layoutX="-38.0" layoutY="296.0" mnemonicParsing="false" onAction="#PrzyciskanulujAction" prefHeight="30.0" prefWidth="193.0" style="-fx-background-color: #fdc050;" text="REJESTRACJA" textAlignment="CENTER">
+            <Button fx:id="przyciskRegister" layoutX="-38.0" layoutY="296.0" mnemonicParsing="false" onAction="#registerAction" prefHeight="30.0" prefWidth="193.0" style="-fx-background-color: #fdc050;" text="REJESTRACJA" textAlignment="CENTER">
                <font>
                   <Font size="14.0" />
                </font>

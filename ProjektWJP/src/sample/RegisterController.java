@@ -1,6 +1,5 @@
 package sample;
 
-import javafx.application.Platform;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
@@ -33,15 +32,15 @@ private PasswordField ustawhaslo2;
 @FXML
 private Label alertpotwierdzhaslo;
 @FXML
-TextField poleimie;
+private TextField poleimie;
 @FXML
-TextField polenazwisko;
+private TextField polenazwisko;
 @FXML
-TextField ustawlogin;
+private TextField ustawlogin;
 @FXML
 private Button wyczyscButton;
 @FXML
-Button mjkButton;
+private Button mjkButton;
 
     public RegisterController() {
     }
@@ -76,7 +75,7 @@ Button mjkButton;
     {
     Stage stage =(Stage) zamknijButton.getScene().getWindow();
     stage.close();
-    Platform.exit();
+
 
     }
 

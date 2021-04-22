@@ -21,18 +21,18 @@ import java.sql.ResultSet;
 import java.sql.Statement;
 import java.util.ResourceBundle;
 
-public class LoginController implements Initializable {
 
+public class LoginController implements Initializable {
     @FXML
-    private Button przyciskanuluj;
+    private Button przyciskanuluj,zamowButton,przyciskRegister;
 @FXML
 private Label alertlogin;
 @FXML
 private ImageView zdjecieWidok;
 @FXML
-private TextField  polelogin;
-@FXML
-private TextField polehaslo;
+private TextField  polelogin,polehaslo;
+
+public Integer zalogowanystatus=0;
 
 @Override
 public void initialize(URL url, ResourceBundle resourceBundle)
@@ -65,6 +65,11 @@ public void initialize(URL url, ResourceBundle resourceBundle)
 
     }
 
+    public void zamowButtonAction(ActionEvent event)
+    {
+        utworzMenuForm();
+    }
+
     public void weryfikacjaLogin()
     {
         sample.BazaDanychConnect polaczenie= new sample.BazaDanychConnect();
@@ -82,7 +87,8 @@ public void initialize(URL url, ResourceBundle resourceBundle)
                 if (queryResult.getInt(1)==1)
                 {
                    // alertlogin.setText("Gratulacje!");
-                    utworzkontoForm();
+                    utworzMenuForm();
+                    zalogowanystatus=1;
                 }
                 else
                 {
@@ -117,5 +123,32 @@ catch(Exception e)
 }
 
 
+
     }
+
+    public void registerAction()
+    {
+        utworzkontoForm();
+    }
+    public void utworzMenuForm()
+    {
+        try
+        {
+            Parent root = FXMLLoader.load(getClass().getResource("menu.fxml"));
+            Stage menuStage=new Stage();
+            menuStage.initStyle(StageStyle.UNDECORATED);
+            menuStage.setScene(new Scene(root, 851, 647));
+            menuStage.show();
+        }
+        catch (Exception e)
+        {
+            e.printStackTrace();
+            e.getCause();
+        }
+
+
+    }
+
+
+
 }
