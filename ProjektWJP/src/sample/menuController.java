@@ -16,7 +16,7 @@ public class menuController extends LoginController implements Initializable {
 @FXML
   private Button fdButton,foButton,hdButton,hoButton,cdButton,coButton,wylogujButton,zalogujButton,registerButton,zamowButton;
 @FXML
-private Label zalogowanyjako,suma,filosc,hilosc,cilosc;
+public Label zalogowanyjako,suma,filosc,hilosc,cilosc;
 @FXML
 private ImageView zkoszyk;
 @FXML
@@ -30,6 +30,7 @@ private ImageView zkoszyk;
     Integer iloscburger=0;
     Integer ilosccola=0;
     Integer zaplata=0;
+
 
 
 public void fdAction()
@@ -49,6 +50,7 @@ sumujCena();
 
     public void cdAction()
     {
+
         ilosccola++;
         cilosc.setText("Ilość: "+ilosccola.toString()+" szt.");
         sumujCena();
@@ -59,6 +61,7 @@ sumujCena();
     {
         if (iloscfrytki>0)
         {
+
             iloscfrytki--;
             filosc.setText("Ilość: "+iloscfrytki.toString()+" szt.");
             sumujCena();
@@ -110,6 +113,15 @@ suma.setText(zaplata.toString()+" zł");
        Image plikzdjecie4= new Image(plik4.toURI().toString());
        zcola.setImage(plikzdjecie4);
 
+if(statuszalogowany==1)
+{
+    zalogujButton.setVisible(false);
+    registerButton.setVisible(false);
+    zalogowanyjako.setText("Zalogowany jako: "+nazwa);
+}
 
    }
+
+
+
 }

@@ -32,7 +32,9 @@ private ImageView zdjecieWidok;
 @FXML
 private TextField  polelogin,polehaslo;
 
-public Integer zalogowanystatus=0;
+public static int statuszalogowany=0;
+    public static String nazwa;
+
 
 @Override
 public void initialize(URL url, ResourceBundle resourceBundle)
@@ -42,6 +44,8 @@ public void initialize(URL url, ResourceBundle resourceBundle)
     zdjecieWidok.setImage(plikzdjecie);
 
 }
+
+
 
     public void przyciskloginAction(ActionEvent event)
     {
@@ -72,23 +76,25 @@ public void initialize(URL url, ResourceBundle resourceBundle)
 
     public void weryfikacjaLogin()
     {
-        sample.BazaDanychConnect polaczenie= new sample.BazaDanychConnect();
+        BazaDanychConnect polaczenie= new BazaDanychConnect();
         Connection polaczDB= polaczenie.getConnection();
 
-        String werLogin="SELECT count(1) FROM users WHERE login = '" + polelogin.getText() + "' AND haslo = '" + polehaslo.getText() +" ' ";
+        String werLogin="SELECT count(1),imie,nazwisko FROM users WHERE login = '" + polelogin.getText() + "' AND haslo = '" + polehaslo.getText() +" ' ";
 
         try
         {
             Statement statement = polaczDB.createStatement();
             ResultSet queryResult = statement.executeQuery(werLogin);
 
-            while(queryResult.next())
+
+            while(queryResult.next() )
             {
                 if (queryResult.getInt(1)==1)
-                {
+                {   nazwa=queryResult.getString(2)+" "+queryResult.getString(3);
                    // alertlogin.setText("Gratulacje!");
+                    statuszalogowany=1;
                     utworzMenuForm();
-                    zalogowanystatus=1;
+
                 }
                 else
                 {
