@@ -9,7 +9,6 @@ import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
-import javafx.stage.Stage;
 
 import java.io.File;
 import java.net.URL;
@@ -17,7 +16,7 @@ import java.sql.Connection;
 import java.sql.Statement;
 import java.util.ResourceBundle;
 
-public class RegisterController implements Initializable {
+public class RegisterController extends LoginController implements Initializable {
 
 @FXML
 private ImageView zdjecieWidok2;
@@ -73,25 +72,27 @@ private Button mjkButton;
 
     public void zamknijButtonAction(ActionEvent event)
     {
-    Stage stage =(Stage) zamknijButton.getScene().getWindow();
-    stage.close();
+    rejestracjaStage.close();
 
 
     }
 
-    public void wyczyscButtonAction (ActionEvent event)
+    public void wyczyscButtonAction ()
     {
         poleimie.setText("");
         polenazwisko.setText("");
         ustawlogin.setText("");
         ustawhaslo.setText("");
         ustawhaslo2.setText("");
+        alertregister.setText("");
+        alertpotwierdzhaslo.setText("");
     }
 
     public void mjkButtonAction (ActionEvent event)
     {
-        Stage stage =(Stage) mjkButton.getScene().getWindow();
-        stage.close();
+        rejestracjaStage.close();
+
+        utworzLoginForm();
     }
 
 
@@ -124,6 +125,7 @@ private Button mjkButton;
          else{
                    Statement statement = polaczDB.createStatement();
                    statement.executeUpdate(wpisanerejestracja);
+                   wyczyscButtonAction();
                    alertregister.setText("Rejestracja przebiegła pomyślnie. Możesz zalogować się na swoje konto!");
                }
             }

@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.zlozonezamowienie">
+   <children>
+      <Label alignment="CENTER" layoutX="33.0" layoutY="14.0" prefHeight="59.0" prefWidth="543.0" text="Dziękujemy za złożone zamówienie!">
+         <font>
+            <Font size="25.0" />
+         </font>
+      </Label>
+      <Button fx:id="wrocButton" layoutX="300.0" layoutY="332.0" mnemonicParsing="false" onAction="#wrocAction" prefHeight="42.0" prefWidth="100.0" text="Wróć">
+         <font>
+            <Font size="21.0" />
+         </font>
+      </Button>
+      <Button fx:id="zakonczButton" layoutX="421.0" layoutY="332.0" mnemonicParsing="false" onAction="#zakonczAction" prefHeight="45.0" prefWidth="158.0" text="Zakończ">
+         <font>
+            <Font size="21.0" />
+         </font>
+      </Button>
+      <Label fx:id="zamfrytki" alignment="CENTER" contentDisplay="CENTER" layoutX="33.0" layoutY="108.0" prefHeight="34.0" prefWidth="400.0" text="Frytki">
+         <font>
+            <Font size="23.0" />
+         </font>
+      </Label>
+      <Label fx:id="zamburger" alignment="CENTER" contentDisplay="CENTER" layoutX="33.0" layoutY="157.0" prefHeight="33.0" prefWidth="400.0" text="Hamburger">
+         <font>
+            <Font size="23.0" />
+         </font>
+      </Label>
+      <Label fx:id="zamcola" alignment="CENTER" contentDisplay="CENTER" layoutX="33.0" layoutY="214.0" prefHeight="33.0" prefWidth="400.0" text="Cola">
+         <font>
+            <Font size="23.0" />
+         </font>
+      </Label>
+      <Label fx:id="kwotasuma" layoutX="336.0" layoutY="287.0" prefHeight="35.0" prefWidth="233.0" text="Łączna kwota:">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Label>
+      <Label fx:id="cena1" layoutX="479.0" layoutY="108.0" prefHeight="34.0" prefWidth="90.0" text="10 zł">
+         <font>
+            <Font size="23.0" />
+         </font>
+      </Label>
+      <Label fx:id="cena2" layoutX="479.0" layoutY="157.0" prefHeight="34.0" prefWidth="90.0" text="10 zł">
+         <font>
+            <Font size="23.0" />
+         </font>
+      </Label>
+      <Label fx:id="cena3" layoutX="479.0" layoutY="214.0" prefHeight="34.0" prefWidth="90.0" text="10 zł">
+         <font>
+            <Font size="23.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

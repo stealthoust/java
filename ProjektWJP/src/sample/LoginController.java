@@ -33,7 +33,18 @@ private ImageView zdjecieWidok;
 private TextField  polelogin,polehaslo;
 
 public static int statuszalogowany=0;
-    public static String nazwa;
+
+public static int scenamenu=0;
+public static int scenarej=0;
+public static int scenalog=1;
+public static int scenazam=0;
+
+public static String nazwa;
+
+static Stage menuStage=new Stage();
+static Stage rejestracjaStage=new Stage();
+static Stage loginStage=new Stage();
+static Stage zamowienieStage=new Stage();
 
 
 @Override
@@ -71,7 +82,12 @@ public void initialize(URL url, ResourceBundle resourceBundle)
 
     public void zamowButtonAction(ActionEvent event)
     {
+
+        Stage stage = (Stage) zamowButton.getScene().getWindow();
+        stage.close();
+
         utworzMenuForm();
+        scenamenu=1;
     }
 
     public void weryfikacjaLogin()
@@ -92,8 +108,13 @@ public void initialize(URL url, ResourceBundle resourceBundle)
                 if (queryResult.getInt(1)==1)
                 {   nazwa=queryResult.getString(2)+" "+queryResult.getString(3);
                    // alertlogin.setText("Gratulacje!");
+
+                    Stage stage = (Stage) zamowButton.getScene().getWindow();
+                    stage.close();
+
                     statuszalogowany=1;
-                    utworzMenuForm();
+                        utworzMenuForm();
+                        scenamenu=1;
 
                 }
                 else
@@ -110,12 +131,21 @@ public void initialize(URL url, ResourceBundle resourceBundle)
 
     }
 
+    public void registerAction()
+    {
+        Stage stage = (Stage) zamowButton.getScene().getWindow();
+        stage.close();
+
+        utworzkontoForm();
+        scenarej=1;
+    }
+
     public void utworzkontoForm()
     {
 try
 {
     Parent root = FXMLLoader.load(getClass().getResource("register.fxml"));
-    Stage rejestracjaStage=new Stage();
+    if(scenarej==0)
     rejestracjaStage.initStyle(StageStyle.UNDECORATED);
     rejestracjaStage.setScene(new Scene(root, 613, 621));
     rejestracjaStage.show();
@@ -128,23 +158,63 @@ catch(Exception e)
     e.getCause();
 }
 
-
-
     }
 
-    public void registerAction()
-    {
-        utworzkontoForm();
-    }
+
     public void utworzMenuForm()
     {
         try
         {
-            Parent root = FXMLLoader.load(getClass().getResource("menu.fxml"));
-            Stage menuStage=new Stage();
-            menuStage.initStyle(StageStyle.UNDECORATED);
-            menuStage.setScene(new Scene(root, 851, 647));
-            menuStage.show();
+
+                Parent root = FXMLLoader.load(getClass().getResource("menu.fxml"));
+                if(scenamenu==0)
+                menuStage.initStyle(StageStyle.UNDECORATED);
+                menuStage.setScene(new Scene(root, 851, 647));
+                menuStage.show();
+
+        }
+        catch (Exception e)
+        {
+            e.printStackTrace();
+            e.getCause();
+        }
+
+
+    }
+
+    public void utworzLoginForm()
+    {
+        try
+        {
+
+            Parent root = FXMLLoader.load(getClass().getResource("login.fxml"));
+            if(scenalog==0)
+                loginStage.initStyle(StageStyle.UNDECORATED);
+            loginStage.setScene(new Scene(root, 696, 477));
+            loginStage.show();
+
+        }
+        catch (Exception e)
+        {
+            e.printStackTrace();
+            e.getCause();
+        }
+
+
+    }
+
+    public void utworzZamowienieForm()
+
+    {
+        try
+        {
+
+            Parent root = FXMLLoader.load(getClass().getResource("zamowienie.fxml"));
+            if(scenazam==0)
+                zamowienieStage.initStyle(StageStyle.UNDECORATED);
+            zamowienieStage.setScene(new Scene(root, 600, 400));
+            zamowienieStage.show();
+
         }
         catch (Exception e)
         {

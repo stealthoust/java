@@ -31,11 +31,16 @@
                   <Font size="24.0" />
                </font>
             </Label>
-            <Button fx:id="wylogujButton" alignment="CENTER" layoutX="436.0" layoutY="16.0" mnemonicParsing="false" prefHeight="49.0" prefWidth="121.0" text="Wyloguj">
+            <Button fx:id="wylogujButton" alignment="CENTER" layoutX="436.0" layoutY="16.0" mnemonicParsing="false" onAction="#wylogujAction" prefHeight="49.0" prefWidth="121.0" text="Wyloguj">
                <font>
                   <Font size="20.0" />
                </font>
             </Button>
+            <Label fx:id="promocja" alignment="CENTER" layoutX="219.0" layoutY="26.0" prefHeight="40.0" prefWidth="351.0" text="Po zalogowaniu niższe ceny!">
+               <font>
+                  <Font size="23.0" />
+               </font>
+            </Label>
          </children>
       </AnchorPane>
       <ImageView fx:id="zfrytki" fitHeight="79.0" fitWidth="106.0" layoutX="103.0" layoutY="162.0" pickOnBounds="true" preserveRatio="true">
@@ -43,7 +48,7 @@
             <Image url="@../../zdj/fries.png" />
          </image>
       </ImageView>
-      <Label alignment="CENTER" layoutX="252.0" layoutY="152.0" prefHeight="40.0" prefWidth="87.0" text="5 zł">
+      <Label fx:id="fcena" alignment="CENTER" layoutX="252.0" layoutY="152.0" prefHeight="40.0" prefWidth="87.0" style="-fx-strikethrough: true;" text="5 zł">
          <font>
             <Font size="24.0" />
          </font>
@@ -68,7 +73,7 @@
             <Font size="24.0" />
          </font>
       </Label>
-      <Label alignment="CENTER" layoutX="252.0" layoutY="312.0" prefHeight="40.0" prefWidth="87.0" text="8 zł">
+      <Label fx:id="hcena" alignment="CENTER" layoutX="252.0" layoutY="312.0" prefHeight="40.0" prefWidth="87.0" text="8 zł">
          <font>
             <Font size="24.0" />
          </font>
@@ -93,7 +98,7 @@
             <Font size="24.0" />
          </font>
       </Label>
-      <Label alignment="CENTER" layoutX="252.0" layoutY="444.0" prefHeight="40.0" prefWidth="87.0" text="4 zł">
+      <Label fx:id="ccena" alignment="CENTER" layoutX="252.0" layoutY="444.0" prefHeight="40.0" prefWidth="87.0" text="4 zł">
          <font>
             <Font size="24.0" />
          </font>
@@ -125,22 +130,32 @@
       </ImageView>
       <AnchorPane layoutX="-1.0" layoutY="590.0" prefHeight="57.0" prefWidth="851.0">
          <children>
-            <Button fx:id="zalogujButton" alignment="CENTER" layoutX="181.0" layoutY="2.0" mnemonicParsing="false" prefHeight="51.0" prefWidth="106.0" text="Zaloguj">
+            <Button fx:id="zalogujButton" alignment="CENTER" layoutX="181.0" layoutY="2.0" mnemonicParsing="false" onAction="#zalogujAction" prefHeight="51.0" prefWidth="106.0" text="Zaloguj">
                <font>
                   <Font size="20.0" />
                </font>
             </Button>
-            <Button fx:id="registerButton" alignment="CENTER" layoutX="344.0" layoutY="2.0" mnemonicParsing="false" prefHeight="51.0" prefWidth="163.0" text="Zarejestruj">
+            <Button fx:id="registerButton" alignment="CENTER" layoutX="344.0" layoutY="2.0" mnemonicParsing="false" onAction="#registerAction" prefHeight="51.0" prefWidth="163.0" text="Zarejestruj">
                <font>
                   <Font size="20.0" />
                </font>
             </Button>
-            <Button fx:id="zamowButton" alignment="CENTER" layoutX="717.0" layoutY="2.0" mnemonicParsing="false" prefHeight="51.0" prefWidth="106.0" text="Zamów">
+            <Button fx:id="zamowButton" alignment="CENTER" layoutX="717.0" layoutY="2.0" mnemonicParsing="false" onAction="#zamowAction" prefHeight="51.0" prefWidth="106.0" text="Zamów">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Button>
+            <Button fx:id="zakonczButton" alignment="CENTER" layoutX="547.0" layoutY="2.0" mnemonicParsing="false" onAction="#zakonczAction" prefHeight="51.0" prefWidth="132.0" text="Zakończ">
                <font>
                   <Font size="20.0" />
                </font>
             </Button>
          </children>
       </AnchorPane>
+      <Label fx:id="menuAlert" alignment="CENTER" layoutX="464.0" layoutY="547.0" prefHeight="40.0" prefWidth="351.0" text="Wybierz coś zanim zamówisz!">
+         <font>
+            <Font size="23.0" />
+         </font>
+      </Label>
    </children>
 </AnchorPane>

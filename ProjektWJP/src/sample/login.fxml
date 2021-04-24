@@ -42,7 +42,7 @@
                   <Font size="14.0" />
                </font>
             </Button>
-            <Button fx:id="przyciskanuluj" layoutX="169.0" layoutY="296.0" mnemonicParsing="false" onAction="#PrzyciskanulujAction" prefHeight="30.0" prefWidth="193.0" style="-fx-background-color: #fdc050;" text="ANULUJ" textAlignment="CENTER">
+            <Button fx:id="przyciskanuluj" layoutX="169.0" layoutY="296.0" mnemonicParsing="false" onAction="#PrzyciskanulujAction" prefHeight="30.0" prefWidth="193.0" style="-fx-background-color: #fdc050;" text="ZAKOŃCZ" textAlignment="CENTER">
                <font>
                   <Font size="14.0" />
                </font>
