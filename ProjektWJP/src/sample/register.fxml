@@ -9,13 +9,13 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="621.0" prefWidth="613.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.RegisterController">
+<AnchorPane prefHeight="673.0" prefWidth="613.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.RegisterController">
    <children>
       <AnchorPane prefHeight="57.0" prefWidth="613.0" style="-fx-background-color: #2fffcd;">
          <children>
             <ImageView fx:id="zdjecieWidok2" fitHeight="50.0" fitWidth="48.0" layoutX="170.0" layoutY="5.0" pickOnBounds="true" preserveRatio="true">
                <image>
-                  <Image url="@../../zdj/HowToRegisterIcon.png" />
+                  <Image url="@../../zdj/pobrane.png" />
                </image>
             </ImageView>
             <Label layoutX="251.0" layoutY="4.0" prefHeight="50.0" prefWidth="200.0" text="Rejestracja" textAlignment="CENTER">
@@ -63,17 +63,17 @@
             <Font size="14.0" />
          </font>
       </PasswordField>
-      <Button fx:id="rejestracjaButton" layoutX="14.0" layoutY="512.0" mnemonicParsing="false" onAction="#registerButtonAction" prefHeight="30.0" prefWidth="269.0" style="-fx-background-color: #2fffcd;" text="Zarejestruj">
+      <Button fx:id="rejestracjaButton" layoutX="14.0" layoutY="563.0" mnemonicParsing="false" onAction="#registerButtonAction" prefHeight="30.0" prefWidth="269.0" style="-fx-background-color: #2fffcd;" text="Zarejestruj">
          <font>
             <Font size="14.0" />
          </font>
       </Button>
-      <Button fx:id="zamknijButton" layoutX="314.0" layoutY="563.0" mnemonicParsing="false" onAction="#zamknijButtonAction" prefHeight="30.0" prefWidth="269.0" style="-fx-background-color: #2fffcd;" text="Zamknij">
+      <Button fx:id="zamknijButton" layoutX="314.0" layoutY="614.0" mnemonicParsing="false" onAction="#zamknijButtonAction" prefHeight="30.0" prefWidth="269.0" style="-fx-background-color: #2fffcd;" text="Zamknij">
          <font>
             <Font size="14.0" />
          </font>
       </Button>
-      <Label fx:id="alertregister" alignment="CENTER" layoutX="28.0" layoutY="427.0" prefHeight="48.0" prefWidth="566.0" textFill="#940000">
+      <Label fx:id="alertregister" alignment="CENTER" layoutX="25.0" layoutY="490.0" prefHeight="48.0" prefWidth="566.0" textFill="#940000">
          <font>
             <Font size="14.0" />
          </font>
@@ -83,15 +83,21 @@
             <Font size="14.0" />
          </font>
       </Label>
-      <Button fx:id="mjkButton" layoutX="315.0" layoutY="512.0" mnemonicParsing="false" onAction="#mjkButtonAction" prefHeight="30.0" prefWidth="269.0" style="-fx-background-color: #2fffcd;" text="Masz już konto?">
+      <Button fx:id="mjkButton" layoutX="315.0" layoutY="563.0" mnemonicParsing="false" onAction="#mjkButtonAction" prefHeight="30.0" prefWidth="269.0" style="-fx-background-color: #2fffcd;" text="Masz już konto?">
          <font>
             <Font size="14.0" />
          </font>
       </Button>
-      <Button fx:id="wyczyscButton" layoutX="14.0" layoutY="563.0" mnemonicParsing="false" onAction="#wyczyscButtonAction" prefHeight="30.0" prefWidth="269.0" style="-fx-background-color: #2fffcd;" text="Wyczyść dane">
+      <Button fx:id="wyczyscButton" layoutX="14.0" layoutY="614.0" mnemonicParsing="false" onAction="#wyczyscButtonAction" prefHeight="30.0" prefWidth="269.0" style="-fx-background-color: #2fffcd;" text="Wyczyść dane">
          <font>
             <Font size="14.0" />
          </font>
       </Button>
+      <Label layoutX="155.0" layoutY="412.0" prefHeight="19.0" prefWidth="100.0" text="Adres">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <TextField fx:id="ustawadres" layoutX="155.0" layoutY="432.0" prefHeight="25.0" prefWidth="300.0" promptText="Adres zamieszkania" />
    </children>
 </AnchorPane>

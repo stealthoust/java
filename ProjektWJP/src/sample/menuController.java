@@ -4,6 +4,7 @@ import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
+import javafx.scene.control.TextField;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 
@@ -16,7 +17,7 @@ public class menuController extends LoginController implements Initializable {
 @FXML
   private Button fdButton,foButton,hdButton,hoButton,cdButton,coButton,wylogujButton,zalogujButton,registerButton,zamowButton;
 @FXML
-public Label zalogowanyjako,suma,filosc,hilosc,cilosc,promocja,fcena,hcena,ccena,menuAlert;
+public Label zalogowanyjako,suma,filosc,hilosc,cilosc,promocja,fcena,hcena,ccena,menuAlert,adreslabel;
 @FXML
 private ImageView zkoszyk;
 @FXML
@@ -25,11 +26,14 @@ private ImageView zkoszyk;
     private ImageView zburger;
     @FXML
     private ImageView zcola;
+@FXML
+private TextField adrestext;
 
    static Integer iloscfrytki=0;
     static Integer iloscburger=0;
     static Integer ilosccola=0;
     static double zaplata=0;
+
 
 
 
@@ -66,7 +70,7 @@ sumujCena();
             iloscfrytki--;
             filosc.setText("Ilość: "+iloscfrytki.toString()+" szt.");
             sumujCena();
-            menuAlert.setText("");
+
         }
     }
 
@@ -78,7 +82,7 @@ sumujCena();
             iloscburger--;
             hilosc.setText("Ilość: "+iloscburger.toString()+" szt.");
             sumujCena();
-            menuAlert.setText("");
+
         }
     }
 
@@ -90,7 +94,7 @@ sumujCena();
             ilosccola--;
             cilosc.setText("Ilość: "+ilosccola.toString()+" szt.");
             sumujCena();
-            menuAlert.setText("");
+
         }
     }
 
@@ -140,9 +144,24 @@ public void zalogujAction()
 public void zamowAction()
 {
     if(zaplata!=0) {
-        menuStage.close();
+        if(statuszalogowany==0 && (adrestext.getText().isBlank()==true ||adrestext.getLength()>150 || adrestext.getLength() <5 ) )
+        {
+            menuAlert.setText("Podaj prawidlowy adres dostawy!");
+        }
+        else if(statuszalogowany==0)
+        {
+            adres=adrestext.getText();
+            menuStage.close();
+            utworzZamowienieForm();
+            scenazam = 1;
+        }
+        else if (statuszalogowany==1) {
+            menuStage.close();
         utworzZamowienieForm();
         scenazam = 1;
+
+        }
+
     }
     else {menuAlert.setText("Wybierz coś zanim zamówisz!");}
 }
@@ -179,6 +198,8 @@ if(statuszalogowany==1)
     hcena.setText("6,50 zł");
     ccena.setText("3,50 zł");
 
+    adreslabel.setVisible(false);
+    adrestext.setVisible(false);
 
 }
 else if (statuszalogowany==0)

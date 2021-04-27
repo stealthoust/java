@@ -14,9 +14,9 @@
    <left>
       <AnchorPane prefHeight="407.0" prefWidth="228.0" BorderPane.alignment="CENTER">
          <children>
-            <ImageView fx:id="zdjecieWidok" fitHeight="616.0" fitWidth="271.0" pickOnBounds="true" preserveRatio="true">
+            <ImageView fx:id="zdjecieWidok" fitHeight="485.0" fitWidth="261.0" pickOnBounds="true" preserveRatio="true">
                <image>
-                  <Image url="@../../zdj/pobrane.jpg" />
+                  <Image url="@../../zdj/kebab.gif" />
                </image>
             </ImageView>
          </children>

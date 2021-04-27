@@ -2,19 +2,20 @@
 
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="647.0" prefWidth="851.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.menuController">
+<AnchorPane prefHeight="819.0" prefWidth="851.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.menuController">
    <children>
       <Label alignment="CENTER" layoutX="70.0" layoutY="112.0" prefHeight="40.0" prefWidth="144.0" text="Frytki">
          <font>
             <Font size="24.0" />
          </font>
       </Label>
-      <AnchorPane prefHeight="79.0" prefWidth="851.0">
+      <AnchorPane prefHeight="79.0" prefWidth="851.0" style="-fx-background-color: feb290;">
          <children>
             <Label fx:id="zalogowanyjako" alignment="CENTER" layoutX="31.0" layoutY="15.0" prefHeight="49.0" prefWidth="365.0" text="Zalogowany jako">
                <font>
@@ -128,33 +129,43 @@
             <Image url="@../../zdj/cola.png" />
          </image>
       </ImageView>
-      <AnchorPane layoutX="-1.0" layoutY="590.0" prefHeight="57.0" prefWidth="851.0">
+      <AnchorPane layoutY="740.0" prefHeight="79.0" prefWidth="851.0" style="-fx-background-color: #feb290;">
          <children>
-            <Button fx:id="zalogujButton" alignment="CENTER" layoutX="181.0" layoutY="2.0" mnemonicParsing="false" onAction="#zalogujAction" prefHeight="51.0" prefWidth="106.0" text="Zaloguj">
+            <Button fx:id="zalogujButton" alignment="CENTER" layoutX="37.0" layoutY="14.0" mnemonicParsing="false" onAction="#zalogujAction" prefHeight="51.0" prefWidth="106.0" text="Zaloguj">
                <font>
                   <Font size="20.0" />
                </font>
             </Button>
-            <Button fx:id="registerButton" alignment="CENTER" layoutX="344.0" layoutY="2.0" mnemonicParsing="false" onAction="#registerAction" prefHeight="51.0" prefWidth="163.0" text="Zarejestruj">
+            <Button fx:id="registerButton" alignment="CENTER" layoutX="171.0" layoutY="14.0" mnemonicParsing="false" onAction="#registerAction" prefHeight="51.0" prefWidth="163.0" text="Zarejestruj">
                <font>
                   <Font size="20.0" />
                </font>
             </Button>
-            <Button fx:id="zamowButton" alignment="CENTER" layoutX="717.0" layoutY="2.0" mnemonicParsing="false" onAction="#zamowAction" prefHeight="51.0" prefWidth="106.0" text="Zamów">
+            <Button fx:id="zamowButton" alignment="CENTER" layoutX="724.0" layoutY="14.0" mnemonicParsing="false" onAction="#zamowAction" prefHeight="51.0" prefWidth="106.0" text="Zamów">
                <font>
                   <Font size="20.0" />
                </font>
             </Button>
-            <Button fx:id="zakonczButton" alignment="CENTER" layoutX="547.0" layoutY="2.0" mnemonicParsing="false" onAction="#zakonczAction" prefHeight="51.0" prefWidth="132.0" text="Zakończ">
+            <Button fx:id="zakonczButton" alignment="CENTER" layoutX="561.0" layoutY="14.0" mnemonicParsing="false" onAction="#zakonczAction" prefHeight="51.0" prefWidth="132.0" text="Zakończ">
                <font>
                   <Font size="20.0" />
                </font>
             </Button>
          </children>
       </AnchorPane>
-      <Label fx:id="menuAlert" alignment="CENTER" layoutX="464.0" layoutY="547.0" prefHeight="40.0" prefWidth="351.0" text="Wybierz coś zanim zamówisz!">
+      <Label fx:id="menuAlert" alignment="CENTER" layoutX="477.0" layoutY="689.0" prefHeight="40.0" prefWidth="351.0" text="Wybierz coś zanim zamówisz!">
          <font>
             <Font size="23.0" />
+         </font>
+      </Label>
+      <TextField fx:id="adrestext" layoutX="56.0" layoutY="632.0" prefHeight="57.0" prefWidth="421.0" promptText="Adres">
+         <font>
+            <Font size="21.0" />
+         </font>
+      </TextField>
+      <Label fx:id="adreslabel" layoutX="56.0" layoutY="586.0" prefHeight="40.0" prefWidth="236.0" text="Adres dostawy">
+         <font>
+            <Font size="26.0" />
          </font>
       </Label>
    </children>

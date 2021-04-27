@@ -16,7 +16,7 @@ import java.sql.Connection;
 import java.sql.Statement;
 import java.util.ResourceBundle;
 
-public class RegisterController extends LoginController implements Initializable {
+public class RegisterController extends Okna implements Initializable {
 
 @FXML
 private ImageView zdjecieWidok2;
@@ -35,7 +35,7 @@ private TextField poleimie;
 @FXML
 private TextField polenazwisko;
 @FXML
-private TextField ustawlogin;
+private TextField ustawlogin,ustawadres;
 @FXML
 private Button wyczyscButton;
 @FXML
@@ -47,7 +47,7 @@ private Button mjkButton;
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
 
-        File plik2= new File("zdj/HowToRegisterIcon.png");
+        File plik2= new File("zdj/pobrane.png");
         Image plikzdjecie2= new Image(plik2.toURI().toString());
         zdjecieWidok2.setImage(plikzdjecie2);
     }
@@ -86,6 +86,7 @@ private Button mjkButton;
         ustawhaslo2.setText("");
         alertregister.setText("");
         alertpotwierdzhaslo.setText("");
+        ustawadres.setText("");
     }
 
     public void mjkButtonAction (ActionEvent event)
@@ -105,8 +106,9 @@ private Button mjkButton;
         String nazwisko=polenazwisko.getText();
         String login=ustawlogin.getText();
         String haslo=ustawhaslo.getText();
-        String kodsql = "INSERT INTO users (imie,nazwisko,login,haslo) VALUES('";
-        String wpisane = imie + "','" + nazwisko + "','" + login + "','" + haslo + "')";
+        String adres=ustawadres.getText();
+        String kodsql = "INSERT INTO users (imie,nazwisko,login,haslo,adres) VALUES('";
+        String wpisane = imie + "','" + nazwisko + "','" + login + "','" + haslo + "','" +adres+ "')";
         String wpisanerejestracja = kodsql + wpisane;
 
 
@@ -117,7 +119,8 @@ private Button mjkButton;
                if(poleimie.getLength()<3 || poleimie.getLength()>20 ||
                polenazwisko.getLength()<3 || polenazwisko.getLength()>20 ||
                ustawlogin.getLength()<3 || ustawlogin.getLength()>20 ||
-               ustawhaslo.getLength()<3 || ustawhaslo.getLength()>20
+               ustawhaslo.getLength()<3 || ustawhaslo.getLength()>20 ||
+               ustawadres.getLength()<3 || ustawadres.getLength()>20
                )
                {
                 alertregister.setText("Wszystkie powyższe pola muszą mieć 3-20 znakow!");
