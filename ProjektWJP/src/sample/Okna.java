@@ -52,7 +52,7 @@ public class Okna {
 
             Parent root = FXMLLoader.load(getClass().getResource("menu.fxml"));
             if(scenamenu==0)
-                menuStage.initStyle(StageStyle.UNDECORATED);
+             menuStage.initStyle(StageStyle.UNDECORATED);
             menuStage.setScene(new Scene(root, 851, 819));
             menuStage.show();
 

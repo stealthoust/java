@@ -65,7 +65,7 @@ private Button mjkButton;
         {
             alertpotwierdzhaslo.setText("Hasla sie nie zgadzaja!!");
         }
-        //alertregister.setText("Rejestracja przebiegła pomyślnie. Możesz zalogować się na swoje konto!");
+
 
 
     }
@@ -92,7 +92,6 @@ private Button mjkButton;
     public void mjkButtonAction (ActionEvent event)
     {
         rejestracjaStage.close();
-
         utworzLoginForm();
     }
 

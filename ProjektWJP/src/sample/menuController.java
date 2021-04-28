@@ -167,6 +167,7 @@ public void zamowAction()
 }
    @Override
    public void initialize(URL url, ResourceBundle resourceBundle) {
+
        File plik5= new File("zdj/sklep.png");
        Image plikzdjecie1= new Image(plik5.toURI().toString());
        zkoszyk.setImage(plikzdjecie1);
@@ -182,7 +183,9 @@ public void zamowAction()
        File plik4= new File("zdj/cola.png");
        Image plikzdjecie4= new Image(plik4.toURI().toString());
        zcola.setImage(plikzdjecie4);
+
       menuAlert.setText("");
+
        wyczyscZamowienie();
 
 

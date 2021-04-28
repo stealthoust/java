@@ -30,6 +30,7 @@ public void wrocAction()
 
 public void zakonczAction()
 {
+
     zamowienieStage.close();
 }
 
@@ -41,7 +42,7 @@ public void zakonczAction()
         zamcola.setText("Cola: "+ilosccola+" sztuk");
         kwotasuma.setText("Łączna kwota: "+zaplata+" zł");
 
-        adresfinal.setText("Twoje zamówienie zostanie dostarczone na adres: \n "+adres);
+
 try
 {
     sample.BazaDanychConnect polaczenie= new sample.BazaDanychConnect();
@@ -53,6 +54,8 @@ try
 
     Statement statement = polaczDB.createStatement();
     statement.executeUpdate(wpisanezamowienie);
+
+    adresfinal.setText("Twoje zamówienie zostanie dostarczone na adres: \n "+adres);
 }
 catch (Exception e)
 {

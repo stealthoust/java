@@ -19,8 +19,8 @@ import java.util.ResourceBundle;
 
 
 public class LoginController extends Okna implements Initializable {
-    @FXML
-    private Button przyciskanuluj,zamowButton,przyciskRegister;
+@FXML
+private Button przyciskanuluj,zamowButton,przyciskRegister;
 @FXML
 private Label alertlogin;
 @FXML
