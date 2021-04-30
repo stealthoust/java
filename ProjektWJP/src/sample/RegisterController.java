@@ -98,7 +98,7 @@ private Button mjkButton;
 
     public void rejestracjaUser()
     {
-        sample.BazaDanychConnect polaczenie= new sample.BazaDanychConnect();
+        BazaDanychConnect polaczenie= new BazaDanychConnect();
         Connection polaczDB= polaczenie.getConnection();
 
         String imie=poleimie.getText();
